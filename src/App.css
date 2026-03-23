@@ -1,0 +1,547 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f5f5f5;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Шапка */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  color: #333;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #333, #666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.status-icon {
+  color: #4caf50;
+}
+
+/* Информационное сообщение */
+.info-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: #f8f9fa;
+  border-left: 4px solid #666;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.info-icon {
+  font-size: 1.2rem;
+  color: #666;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.info-text {
+  color: #444;
+  line-height: 1.5;
+}
+
+.info-text strong {
+  color: #222;
+}
+
+/* Карточки */
+.card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f0f0f0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Формы */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #444;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  transition: all 0.2s;
+  background: #fafafa;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #666;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(102, 102, 102, 0.1);
+}
+
+.input:disabled,
+.textarea:disabled {
+  background: #f0f0f0;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.hint {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.warning {
+  color: #f57c00;
+}
+
+.split-warning {
+  color: #f57c00;
+  font-style: italic;
+}
+
+/* Кнопки */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: "Inter", sans-serif;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #222;
+  color: white;
+  flex: 2;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background: #f0f0f0;
+  color: #333;
+  flex: 1;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #e0e0e0;
+  transform: translateY(-1px);
+}
+
+.btn-icon {
+  font-size: 1.1rem;
+}
+
+/* Расширенные настройки */
+.advanced-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  color: #555;
+  font-weight: 500;
+  user-select: none;
+}
+
+.advanced-toggle:hover {
+  color: #222;
+}
+
+.advanced-settings {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed #ddd;
+}
+
+.note {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  border-left: 3px solid #999;
+}
+
+/* Логи */
+.logs {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 0.5rem;
+  background: #fafafa;
+}
+
+.empty-logs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  color: #999;
+  text-align: center;
+  gap: 1rem;
+}
+
+.empty-logs svg {
+  color: #ccc;
+}
+
+.log-entry {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.log-entry:hover {
+  background: #f5f5f5;
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+}
+
+.log-time {
+  color: #888;
+  font-family: monospace;
+  font-size: 0.8rem;
+  min-width: 70px;
+  margin-right: 1rem;
+}
+
+.log-message {
+  flex: 1;
+  color: #333;
+}
+
+.log-icon {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.log-success .log-icon {
+  color: #4caf50;
+}
+
+.log-error .log-icon {
+  color: #f44336;
+}
+
+.log-info .log-message {
+  color: #2196f3;
+}
+
+/* Инструкции */
+.instructions {
+  padding-left: 1.5rem;
+  color: #444;
+}
+
+.instructions li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.instructions strong {
+  color: #222;
+  background: #f0f0f0;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Скроллбар */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+/* Animacje */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsywność dla formularzy */
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .phone-item {
+    flex-wrap: wrap;
+  }
+}
+
+/* Style dla listy numerów */
+.phones-list {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 1rem;
+}
+
+.phone-item:hover {
+  background: #f0f0f0 !important;
+}
+
+/* Template grid */
+.templates-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+}
+
+.template-item {
+  position: relative;
+}
+
+.template-item:hover .btn-select {
+  background: #000;
+}
+/* Dodaj na końcu pliku App.css */
+
+/* Spinner dla przycisków */
+.spinner-small {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #666;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+/* Panel planowania */
+.schedule-panel {
+  transition: all 0.3s ease;
+}
+
+/* Zaplanowane elementy */
+.scheduled-item {
+  transition: all 0.2s ease;
+}
+
+.scheduled-item:hover {
+  background: #f5f5f5 !important;
+  transform: translateX(5px);
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+  .schedule-panel {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  .schedule-panel .form-group {
+    margin-bottom: 1rem !important;
+  }
+
+  .scheduled-item {
+    flex-wrap: wrap;
+  }
+}
+
+/* Statusy */
+.badge-scheduled {
+  background: #fff3e0;
+  color: #f57c00;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+}
+
+.badge-sent {
+  background: #e8f5e9;
+  color: #4caf50;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+}
+
+.badge-failed {
+  background: #ffebee;
+  color: #f44336;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+}
