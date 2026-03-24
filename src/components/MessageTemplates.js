@@ -82,7 +82,13 @@ Zespół JetZone24`,
 
   return (
     <div className="card">
-      <h3>📝 Szablony wiadomości</h3>
+      <h3>
+        <i
+          className="fa-regular fa-clipboard"
+          style={{ color: "rgb(0, 0, 0)", paddingRight: "5px" }}
+        ></i>{" "}
+        Szablony wiadomości
+      </h3>
 
       <div
         className="templates-grid"
@@ -165,7 +171,7 @@ Zespół JetZone24`,
         ))}
       </div>
 
-      <div
+      {/* <div
         className="template-hint"
         style={{
           marginTop: "1rem",
@@ -180,7 +186,7 @@ Zespół JetZone24`,
         <code style={{ marginLeft: "0.3rem" }}>{"{GODZINA}"}</code> - godzina
         lotu,
         <code style={{ marginLeft: "0.3rem" }}>{"{IMIE}"}</code> - imię klienta
-      </div>
+      </div> */}
     </div>
   );
 }
