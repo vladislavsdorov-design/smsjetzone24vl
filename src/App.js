@@ -8,7 +8,7 @@ import FloatingParticles from "./components/FloatingParticles";
 import "./App.css";
 
 function App() {
-  const [gatewayIp, setGatewayIp] = useState("192.168.1.155");
+  const [gatewayIp, setGatewayIp] = useState("192.168.1.156");
   const [gatewayPort, setGatewayPort] = useState("8080");
   const [logs, setLogs] = useState([]);
   const [activeTab, setActiveTab] = useState("bulk"); // 'bulk' lub 'quick'

@@ -509,7 +509,7 @@ function BulkSmsSender({ gatewayIp, gatewayPort, addLog }) {
         <div
           style={{
             display: "flex",
-            alignItems: "center",
+            alignItems: "center",Simple SMS Gateway
             gap: "1rem",
             flexWrap: "wrap",
           }}
